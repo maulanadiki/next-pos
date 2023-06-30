@@ -3,14 +3,15 @@ import Navbar from '@/component/navbar/Navbar'
 import React from 'react'
 import './index.css'
 
-const Layout = () => {
+const Layout = ({children}) => {
   return (
     <main className='container mx-auto layout__grid'>
-        <aside className='layout__navbar'>
-         <Navbar/>
+        <aside className='nav__side'>
+            <Navbar/>
         </aside>
-        <section className='layout__content'>
-            <Content/>
+        <section className='content'>
+          <Content/>
+          {children}
         </section>
     </main>
   )

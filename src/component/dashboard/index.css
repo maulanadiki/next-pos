@@ -40,6 +40,8 @@ align-items: center;
     display: flex;
     flex-direction: column;
     width: 16%;
+    z-index: 5;
+    box-shadow:  0 2px 5px rgba(0, 0, 0, 0.2);
     /* padding: 5px; */
     /* gap: 20px; */
 }
@@ -63,4 +65,8 @@ align-items: center;
     /* background-color: red; */
     background-color: var(--blue-pursian-400);
     color: white;
+}
+
+.dashboard__container{
+    margin-top: 20px;
 }

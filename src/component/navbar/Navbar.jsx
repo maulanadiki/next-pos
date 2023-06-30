@@ -27,7 +27,7 @@ const Navbar = () => {
         <div key={item.id} className="navbar__main-container">
           <div className={`navbar__main-accordion ${accordion === index ? 'accordion_active' : ''}`}
             onClick={() => handleClick(index)}>
-          <i class={item.icon}></i> {item.menu}
+          <a href={item.source}><i className={item.icon}></i> {item.menu}</a>
           </div>
           {item.submenu && (
             <span className={`navbar__main-icon ${accordion === index ? 'rotate' : ''}`}> <i className='bx bx-right-arrow-alt'></i></span>
@@ -38,7 +38,8 @@ const Navbar = () => {
             <div className={`navbar__accordion-submenu ${accordion === index ? 'submenu-active' : ''}`}>
               {item.submenu.map((subItem,subIndex) => (
                 <div key={subItem.id} className={`navbar__submenu-item ${subAccordion === subIndex ? 'item-active' : ''}`}>
-                  <a href="#" className='navbar__submenu-list'onClick={() => handleSubAccordion(subIndex)}>{subItem.title}</a>
+                  <a href={`subIndex.source`} className='navbar__submenu-list'onClick={() => handleSubAccordion(subIndex)}>
+                  <i className={subItem.icon}></i> {subItem.title}</a>
                 </div>
               ))}
             </div>

@@ -13,13 +13,12 @@ const Dashboard = () => {
           },
           series: [{
             type: 'line',
-            data: [1, 3, 2, 4, 5, 7, 6]
+            data: [1, 3, 2, 4, 5, 7, 6,10,15,2]
           }]
         });
       }, []);
   return (
-    <div>
-        ini dashboard
+    <div className='dashboard__container'>
         <div id="chart-container" />
     </div>
   )
