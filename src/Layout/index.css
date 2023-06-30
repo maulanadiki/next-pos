@@ -1,0 +1,11 @@
+.layout__grid{
+    position: relative;
+    display: grid;
+    grid-template-columns: 224px 1fr;
+}
+.layout__navbar{
+background-color: bisque;
+}
+.layout__content{
+
+}

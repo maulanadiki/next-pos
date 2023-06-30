@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+  background-color: #f2f2f2;
+}
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  --blue-pursian : #023047;
+  --blue-pursian-100 : #C6F2F5 ;
+  --blue-pursian-200 : #90DFEC  ;
+  --blue-pursian-300 : #53AFC7 ;
+  --blue-pursian-400 : #277490 ;
+  --blue-pursian-600 : #01253D ;
+  --blue-pursian-700 : #011B33 ;
+  --blue-pursian-800 : #001329 ;
+  --blue-pursian-900 : #000E22 ;
+
+
+
+  --blue-ocean:#219EBC;
+  --blue-sky :#8ECAE6;
+  --yellow-selective :#FFB703;
+  --orange-ut :#FB8500;
+
+
+  --blue-federal :#03045E;
+  --blue-marina :#023E8A;
+  --blue-honolulu :#0077B6;
+  --blue-green:#0096C7;
+  --blue-pasific:#00B4D8;
+  --vivid-sky :#48CAE4;
+  --blue-photo :#90E0EF;
+  --blue-light-photo:#ADE8F4;
+  --blue-cyan-light :#CAF0F8;
+
+  --text-color : #2f2f2f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
