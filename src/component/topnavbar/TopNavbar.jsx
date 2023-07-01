@@ -1,5 +1,6 @@
 "use client"
 import React,{useState, useEffect} from 'react'
+import './index.css'
 const TopNavbar = () => {
     const [dropdown, setDropdown]= useState(false);
     const toggleDropdown = ()=>{
@@ -26,8 +27,8 @@ const TopNavbar = () => {
                 </button>
                 {dropdown && (
                     <div className="dropdown__content">
-                        <a href="#">Logout</a>
-                        <a href="#">Setting Account</a>
+                        <a href="#"><i class="uil uil-power"></i> Logout</a>
+                        <a href="#"><i class="uil uil-setting"></i> Setting Account</a>
                     </div>
                 )}
             </div>

@@ -1,9 +1,31 @@
-.layout__grid{
-    position: relative;
+.container__layout{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f3f3f3;
     display: grid;
     grid-template-columns: 224px 1fr;
+    position: relative;
+    overflow: hidden;
 }
-.layout__navbar{
-background-color: bisque;
+.nav_side{
+    background-color: red;
+
 }
-  
+.main__content{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+}
+.main__content-header{
+    background-color: #f3f3f3;
+    position: fixed;
+    width: calc(100% - 224px);
+}
+.main__content-content{
+margin-top: 50px;
+height: calc(100% - 50px);
+padding: 1rem;
+}
+
+
+

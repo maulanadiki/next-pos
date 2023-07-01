@@ -1,18 +1,32 @@
-import Content from '@/component/dashboard/Content'
 import Navbar from '@/component/navbar/Navbar'
+import TopNavbar from '@/component/topnavbar/TopNavbar'
+import Head from 'next/head'
 import React from 'react'
 import './index.css'
 
 const Layout = ({children}) => {
   return (
-    <main className='container mx-auto layout__grid'>
-        <aside className='nav__side'>
-            <Navbar/>
+    <main>
+     
+        
+      <div className='container__layout'>
+        <aside className='nav_side'>
+          <Navbar/>
         </aside>
-        <section className='content'>
-          <Content/>
-          {children}
+        <section className='main__content'>
+          <div className="main__content-header">
+            <TopNavbar/>
+          </div>
+          <div className="main__content-content">
+          <Head>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+      </Head>
+            {children}
+          </div>
         </section>
+        
+      </div>
     </main>
   )
 }

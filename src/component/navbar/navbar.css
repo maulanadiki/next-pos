@@ -12,7 +12,7 @@
 }
 .navbar__main-container{
     border-bottom: 1px solid var(--blue-pursian);
-    overflow: auto;
+    /* overflow: auto; */
 }
 .navbar__main-container:nth-last-child(1){
     border-bottom: none;

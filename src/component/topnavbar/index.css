@@ -1,21 +1,10 @@
-.content__container{
-height: 100vh;
-overflow: hidden;
-position: relative;
+.topnav__container{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    box-shadow:  0 2px 5px rgba(0, 0, 0, 0.2);
 }
-.content__header{
-position: relative;
-display: flex;
-justify-content: end;
-align-items: center;
-height: 60px;
-box-shadow:  0 2px 5px rgba(0, 0, 0, 0.2);
-}
-.content__main{
-    height: calc(100% - 60px);
-    overflow: hidden;
-}
-
 .dropdown{
     margin-right: 20px;
 }
@@ -37,9 +26,10 @@ align-items: center;
     background-color: white;
     position: absolute;
     top: 50px;
+    right: 10px;
     display: flex;
     flex-direction: column;
-    width: 16%;
+    width: 15%;
     z-index: 5;
     box-shadow:  0 2px 5px rgba(0, 0, 0, 0.2);
     /* padding: 5px; */
