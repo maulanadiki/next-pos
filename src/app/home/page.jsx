@@ -23,7 +23,7 @@ const Page = () => {
             <div className="content__card">
                 <Card/>
             </div>
-            <div id="chart-container" />
+                <div id="chart-container" />
         </div>
     </Layout>
   )

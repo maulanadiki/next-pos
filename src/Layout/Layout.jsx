@@ -4,28 +4,26 @@ import Head from 'next/head'
 import React from 'react'
 import './index.css'
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
     <main>
-     
-        
+
+
       <div className='container__layout'>
         <aside className='nav_side'>
-          <Navbar/>
+          <Navbar />
         </aside>
         <section className='main__content'>
           <div className="main__content-header">
-            <TopNavbar/>
+            <TopNavbar />
           </div>
           <div className="main__content-content">
-          <Head>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
-      </Head>
+              <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
+              <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
             {children}
           </div>
         </section>
-        
+
       </div>
     </main>
   )
