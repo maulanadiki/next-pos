@@ -23,7 +23,9 @@ const Page = () => {
             <div className="content__card">
                 <Card/>
             </div>
+            <div className="conten-chart">
                 <div id="chart-container" />
+            </div>
         </div>
     </Layout>
   )

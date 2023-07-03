@@ -1,6 +1,5 @@
 import Navbar from '@/component/navbar/Navbar'
 import TopNavbar from '@/component/topnavbar/TopNavbar'
-import Head from 'next/head'
 import React from 'react'
 import './index.css'
 
@@ -12,6 +11,7 @@ const Layout = ({ children }) => {
       <div className='container__layout'>
         <aside className='nav_side'>
           <Navbar />
+          ini
         </aside>
         <section className='main__content'>
           <div className="main__content-header">
@@ -25,6 +25,8 @@ const Layout = ({ children }) => {
         </section>
 
       </div>
+
+      
     </main>
   )
 }

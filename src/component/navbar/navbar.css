@@ -1,3 +1,6 @@
+.navigation__main{
+    position: relative;
+}
 .navbar__container{
     position: fixed;
     width: 224px;
@@ -73,4 +76,47 @@ color: white;
 .item-active{
     background-color: var(--blue-pursian-400);
     color: white;
+}
+.navbar__footer{
+    display: none;
+}
+@media screen and (min-width:992px){
+    
+}
+@media screen and  (min-width: 768px) and (max-width: 991.98px) {
+    .navbar__container{
+        position: fixed;
+    width: 180px;
+    background-color:var(--blue-pursian-600);
+    height: 100%;
+    /* height: 100vh; */
+    color: white;
+    overflow: auto;
+    }
+ }
+@media screen and (max-width:576px){
+    .navbar__container{
+       display: block;
+       position: fixed;
+       width: 100%;
+       background-color:var(--blue-pursian-600);
+       height: 100%;
+       color: white;
+       overflow: auto;
+       top: 0;
+       transition: transform 0.3s ease;
+       z-index: 2;
+    }
+
+    .navbar__footer{
+        display: flex;
+        justify-content: end;
+        padding-right: 20px;
+        position: fixed;
+        bottom: 0px;
+        height: 50px;
+        width: 100%;
+        background-color: var(--blue-pursian-600);
+        z-index: 2;
+    }
 }

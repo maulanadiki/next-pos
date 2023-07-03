@@ -23,7 +23,9 @@ const TopNavbar = () => {
             <div className="dropdown">
                 <button className={`dropdown__button ${dropdown ? 'drop-active' : '' }`} onClick={toggleDropdown}>
                 <i className='bx bxs-user-circle topnav-icon' ></i> Dropdown 
-                <i className='bx bxs-down-arrow topnav-icondown'></i>
+               <span className='panah-bawah'> <i className='bx bxs-down-arrow topnav-icondown'></i></span>
+               <span className='panah-atas'><i className='bx  bxs-up-arrow topnav-icondown'></i></span>
+
                 </button>
                 {dropdown && (
                     <div className="dropdown__content">
