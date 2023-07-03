@@ -1,0 +1,19 @@
+.card__container{
+    position: relative;
+    display: block;
+    width: 50%;
+    background-color: red;
+    overflow-y: auto;
+    min-width: 0;
+}
+.content__card-container{
+    display: grid;
+    grid-template-columns:repeat(5, 350px);
+    gap:10px ;
+    grid-template-rows: repeat(1, 1fr);
+}
+.content__card-list{
+    border: 5px solid blue;
+    width: 300px;
+    padding: 10px;
+}

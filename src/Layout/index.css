@@ -54,7 +54,6 @@ padding: 1rem;
     .main__content{
         width: 100%;
         height: calc(100% - 50px);
-        /* background-color: red; */
         overflow: auto;
     }
     .main__content-header{
