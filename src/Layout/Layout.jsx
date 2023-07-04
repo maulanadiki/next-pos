@@ -3,6 +3,8 @@ import TopNavbar from '@/component/topnavbar/TopNavbar'
 import React from 'react'
 import './index.css'
 
+
+
 const Layout = ({ children }) => {
   return (
     <main>

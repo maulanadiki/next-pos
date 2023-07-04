@@ -28,6 +28,26 @@
    width: 100%;
    position: static;
    overflow: auto;
-   background-color: red;
    margin-top: 10px;
 }
+.table__search{
+    text-align: end;
+    margin-bottom: 10px;
+    color: var(--text-black);
+}
+.search__table{
+padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  width: 200px;
+  background-color: #fff;
+}
+.search__table ::placeholder {
+    color: #fff;
+  }
+  .search__table:focus {
+    outline: none;
+    border-color: var(--blue-pursian-400);
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.3);
+  }
