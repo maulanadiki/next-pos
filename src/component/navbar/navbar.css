@@ -52,6 +52,7 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
+    color: var(--text-black);
 }
 .navbar__accordion-submenu.submenu-active{
     max-height: 500px;

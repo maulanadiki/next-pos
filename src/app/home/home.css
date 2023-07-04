@@ -1,20 +1,21 @@
 .content__container{
-    width: 100%;
+    /* background-color: aqua; */
+    padding: 20px;
+    width: 100vw;
     height: 100%;
-    overflow: auto;
-    background-color: aquamarine;
+    overflow: hidden;
 }
+
 .content__card{
-    width: 90%;
-    height:10rem;
+    /* background-color: red; */
+    width: 79vw;
     overflow: auto;
-    background-color: grey;
 }
 .content__chart{
-    width: 90%;
-    height: 15rem;
+ /* background-color: aquamarine; */
+ padding: 10px;
+ width: 79vw;
 }
-#chart-container{
-    width: 100%;
-    height: calc(100% - 17rem);
+#hightchart{
+    height: 55vh;
 }

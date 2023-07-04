@@ -1,9 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
 body{
   background-color: #f2f2f2;
   scroll-behavior: smooth;
+}
+h3{
+  font-size: 1.8rem;
+}
+h4{
+  font-size: 1.4rem;
+}
+h5{
+  font-size: 1.2rem;
+}
+h6{
+  font-size: 1rem;
+}
+*{
+  font-family: 'Poppins', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -53,7 +70,19 @@ body{
   --blue-light-photo:#ADE8F4;
   --blue-cyan-light :#CAF0F8;
 
-  --text-color : #2f2f2f;
+  --text-black : #2f2f2f;
+  --text-white: #fff;
+
+  /* color popular */
+  --color-primary:#1D3557;
+  --color-success:#A8DADC;
+  --color-warning:#E9C46A;
+  --color-info:#457B9D;
+  --color-danger:#E63946;
+
+  /* box color */
+  --color-red :#8b1919;
+  --color-yellow:#989832;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -63,3 +92,9 @@ body{
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+
+@media screen and (min-width:992px){}
+@media screen and  (min-width: 768px) and (max-width: 991.98px) {
+}
+@media screen and (max-width:767px){}

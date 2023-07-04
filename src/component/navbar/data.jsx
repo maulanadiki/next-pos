@@ -27,32 +27,26 @@ export const Menu =[
         submenu:[
             {
                 id:6,
-                title:'Daftar Kategori',
-                source:'/home',
-                icon:'uil uil-channel-add'
-            },
-            {
-                id:7,
-                title:'Daftar Barang',
-                source:'/home',
-                icon:'uil uil-file-plus-alt',
+                title:'Daftar Aset',
+                source:'/aset',
+                icon:'uil uil-file-plus-alt'
             },
             {
                 id:8,
                 title:'Barang Masuk',
-                source:'/home',
+                source:'/masuk',
                 icon:'uil uil-import',
             },
             {
                 id:9,
                 title:'Barang Keluar',
-                source:'/home',
+                source:'/keluar',
                 icon:'uil uil-parcel',
             },
             {
                 id:10,
                 title:'Stok Barang',
-                source:'/home',
+                source:'/stok',
                 icon:'bx bxs-paste',
             },
         ],

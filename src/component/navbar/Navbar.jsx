@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { Menu } from './data'
 import './navbar.css'
+import Link from 'next/link'
 
 const Navbar = () => {
   const [accordion, setAccordion] = useState(null);
@@ -32,19 +33,22 @@ const Navbar = () => {
           <div key={item.id} className="navbar__main-container">
             <div className={`navbar__main-accordion ${accordion === index ? 'accordion_active' : ''}`}
               onClick={() => handleClick(index)}>
-            <a href={item.source}><i className={item.icon}></i> {item.menu}</a>
+              <a href={item.source}><i className={item.icon}></i> {item.menu}</a>
             </div>
             {item.submenu && (
               <span className={`navbar__main-icon ${accordion === index ? 'rotate' : ''}`}> <i className='bx bx-right-arrow-alt'></i></span>
 
             )}
-            
+
             {item.submenu && (
               <div className={`navbar__accordion-submenu ${accordion === index ? 'submenu-active' : ''}`}>
-                {item.submenu.map((subItem,subIndex) => (
+                {item.submenu.map((subItem, subIndex) => (
                   <div key={subItem.id} className={`navbar__submenu-item ${subAccordion === subIndex ? 'item-active' : ''}`}>
-                    <a href={`subIndex.source`} className='navbar__submenu-list'onClick={() => handleSubAccordion(subIndex)}>
-                    <i className={subItem.icon}></i> {subItem.title}</a>
+                    <Link href={subItem.source}>
+                      <div className='navbar__submenu-list' onClick={() => handleSubAccordion(subIndex)}>
+                        <i className={subItem.icon}></i> {subItem.title}
+                      </div>
+                    </Link>
                   </div>
                 ))}
               </div>

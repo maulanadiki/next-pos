@@ -38,7 +38,7 @@ padding: 1rem;
         width: calc(100% - 180px);
     }
  }
-@media screen and (max-width:576px){
+@media screen and (max-width:767px){
     .container__layout{
         display: flex;
         position: relative;

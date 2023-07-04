@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: end;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: var(--text-black);
 }
 
 .dropdown {
@@ -38,6 +39,8 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     /* padding: 5px; */
     /* gap: 20px; */
+    color: var(--text-black);
+    z-index: 10;
 }
 
 
