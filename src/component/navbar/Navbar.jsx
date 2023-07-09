@@ -1,8 +1,9 @@
 "use client"
 import React, { useState } from 'react'
 import { Menu } from './data'
-import './navbar.css'
+import styles from './navbar.module.css'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const Navbar = () => {
   const [accordion, setAccordion] = useState(null);
@@ -21,40 +22,47 @@ const Navbar = () => {
     setToggle(!toggle);
   };
 
-  return (
-    <div className='navigation__main'>
+  const router = useRouter()
 
-      <div className={`navbar__container ${toggle ? 'open' : ''}`}>
-        <div className="navbar__logo">
+  return (
+    <div className={styles['navigation__main']}>
+
+      <div className={`${styles['navbar__container']} ${toggle ? styles.open : ''}`}>
+        <div className={styles['navbar__logo']}>
           ini untuk area logo
         </div>
+        <div>
+          {Menu.map((menu, index) => {
+            return (
+              <div key={index} className={styles['navbar__main__container']}>
+                <div className={`${styles['navbar__main-accordion']} ${accordion === index ? styles['accordion_active'] : ''}`} onClick={() => handleClick(index)}>
+                  {menu.name}
+                </div>
+                {menu.submenu && (
+                  <span className={`${styles['navbar__main-icon']} ${accordion === index ? styles.rotate : ''}`}> <i className='bx bx-right-arrow-alt'></i></span>
+                )}
 
-        {Menu.map((item, index) => (
-          <div key={item.id} className="navbar__main-container">
-            <div className={`navbar__main-accordion ${accordion === index ? 'accordion_active' : ''}`}
-              onClick={() => handleClick(index)}>
-              <a href={item.source}><i className={item.icon}></i> {item.menu}</a>
-            </div>
-            {item.submenu && (
-              <span className={`navbar__main-icon ${accordion === index ? 'rotate' : ''}`}> <i className='bx bx-right-arrow-alt'></i></span>
 
-            )}
-
-            {item.submenu && (
-              <div className={`navbar__accordion-submenu ${accordion === index ? 'submenu-active' : ''}`}>
-                {item.submenu.map((subItem, subIndex) => (
-                  <div key={subItem.id} className={`navbar__submenu-item ${subAccordion === subIndex ? 'item-active' : ''}`}>
-                    <Link href={subItem.source}>
-                      <div className='navbar__submenu-list' onClick={() => handleSubAccordion(subIndex)}>
-                        <i className={subItem.icon}></i> {subItem.title}
-                      </div>
-                    </Link>
+                {menu.submenu && (
+                  <div className={`${styles['navbar__accordion-submenu']} ${accordion === index ? styles['submenu-active'] : ''}`}>
+                    {menu.submenu.map((subItem, subIndex) => {
+                      return (
+                        <div key={subIndex}>
+                          <div className={`${styles['navbar__submenu-item']} ${subAccordion === subIndex ? styles['item-active'] : ''}`}>
+                            <div className={styles['navbar__submenu-list']} onClick={() => handleSubAccordion(subIndex)}>
+                              <i className={subItem.icon}></i> {subItem.title}
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    })}
                   </div>
-                ))}
+                )}
               </div>
-            )}
-          </div>
-        ))}
+            )
+          })}
+        </div>
+
       </div>
 
       <div className="navbar__footer">

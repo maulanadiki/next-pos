@@ -13,14 +13,14 @@
 .navbar__logo{
     padding: 3rem 1.5rem;
 }
-.navbar__main-container{
+.navbar__main__container{
     border-bottom: 1px solid var(--blue-pursian);
     /* overflow: auto; */
 }
-.navbar__main-container:nth-last-child(1){
+.navbar__main__container:nth-last-child(1){
     border-bottom: none;
 }
-.navbar__main-container:hover{
+.navbar__main__container:hover{
     background-color: var(--blue-pursian);
     cursor: pointer;
 }
