@@ -22,7 +22,11 @@ const Navbar = () => {
     setToggle(!toggle);
   };
 
-  const router = useRouter()
+  const router = useRouter();
+  // path adalah parameternya
+  const handleChangePage = (path)=>{
+    router.push(path)
+  }
 
   return (
     <div className={styles['navigation__main']}>
@@ -36,7 +40,7 @@ const Navbar = () => {
             return (
               <div key={index} className={styles['navbar__main__container']}>
                 <div className={`${styles['navbar__main-accordion']} ${accordion === index ? styles['accordion_active'] : ''}`} onClick={() => handleClick(index)}>
-                  {menu.name}
+                  <button className={router.pathName === menu.path ? styles['accordion_active']: ''} onClick={()=>handleChangePage(menu.path)}>{menu.name}</button>
                 </div>
                 {menu.submenu && (
                   <span className={`${styles['navbar__main-icon']} ${accordion === index ? styles.rotate : ''}`}> <i className='bx bx-right-arrow-alt'></i></span>
@@ -65,7 +69,7 @@ const Navbar = () => {
 
       </div>
 
-      <div className="navbar__footer">
+      <div className={styles["navbar__footer"]}>
         <button onClick={mainMenu}><i className="uil uil-bars"></i></button>
       </div>
     </div>

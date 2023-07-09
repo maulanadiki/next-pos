@@ -3,7 +3,7 @@ export const Menu =[
         id:0,
         name:'Home',
         icon:'bx bx-home-alt',
-        path:'/',
+        path:'/home',
         submenu:'',
     },
     {
