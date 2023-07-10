@@ -24,7 +24,9 @@ const Navbar = () => {
 
   const router = useRouter();
   // path adalah parameternya
-  
+  const handleChangePage = (path) => {
+    router.push(path)
+  }
 
   return (
     <div className={styles['navigation__main']}>
@@ -39,9 +41,9 @@ const Navbar = () => {
           <div>
             {Menu.map((menu, index) => {
               return (
-                <div key={index} className={styles['navbar__main__container']} onClick={() => menu.path?.startsWith && router.push(menu.path)}>
+                <div key={index} className={styles['navbar__main__container']} onClick={() => handleChangePage(menu.path)}>
                   <div className={`${styles['navbar__main-accordion']} ${accordion === menu.path ? styles['accordion_active'] : ''}`} onClick={() => handleClick(index)}>
-                    <button className={router.pathName === menu.path ? styles['accordion_active'] : ''} onClick={() => router.push(menu.path)}>{menu.name}</button>
+                    <button className={router.pathName === menu.path ? styles['accordion_active'] : ''} onClick={() => handleChangePage(menu.path)}>{menu.name}</button>
                   </div>
                   {menu.submenu && (
                     <span className={`${styles['navbar__main-icon']} ${accordion === index ? styles.rotate : ''}`}> <i className='bx bx-right-arrow-alt'></i></span>

@@ -13,7 +13,6 @@ const Layout = ({ children }) => {
       <div className='container__layout'>
         <aside className='nav_side'>
           <Navbar />
-          ini
         </aside>
         <section className='main__content'>
           <div className="main__content-header">

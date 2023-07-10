@@ -19,3 +19,26 @@
 #hightchart{
     height: 55vh;
 }
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {}
+
+@media screen and (max-width:576px){
+    .content__container{
+        width: 100%;
+        padding: 20px;
+        overflow: auto;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .content__chart{
+        width: 100%;
+    }
+    .content__card{
+        width: 100%;
+    }
+    #hightchart{
+        height: 100%;
+    }
+}

@@ -29,8 +29,8 @@ const TopNavbar = () => {
                 </button>
                 {dropdown && (
                     <div className="dropdown__content">
-                        <a href="#"><i class="uil uil-power"></i> Logout</a>
-                        <a href="#"><i class="uil uil-setting"></i> Setting Account</a>
+                        <a href="#"><i className="uil uil-power"></i> Logout</a>
+                        <a href="#"><i className="uil uil-setting"></i> Setting Account</a>
                     </div>
                 )}
             </div>
