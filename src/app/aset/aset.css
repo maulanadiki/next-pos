@@ -8,7 +8,10 @@
 .container__dropdown{
     position: relative;
     width: 100%;
-    text-align: end;
+    /* text-align: end; */
+    display: flex;
+    justify-content: end;
+
 }
 .container__dropdown>button{
     background-color: var(--blue-pursian);
@@ -18,11 +21,7 @@
     border-radius: 12px;
     transition: 0.3s ease-in-out;
 }
-.container__dropdown>button:hover{
-    filter: brightness(120%);
-    font-size: 0.95rem;
-    transform:rotate3d(2000%)
-}
+
 
 .container__table{
    width: 100%;
@@ -51,3 +50,10 @@ padding: 10px;
     border-color: var(--blue-pursian-400);
     box-shadow: 0 0 5px rgba(108, 99, 255, 0.3);
   }
+
+
+/* modal area */
+.modal-box{
+    background-color: #f3f3f3 !important;
+    color: var(--text-black) !important;
+}

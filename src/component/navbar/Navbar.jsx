@@ -41,7 +41,7 @@ const Navbar = () => {
               return (
                 <div key={index} className={styles['navbar__main__container']} onClick={() => menu.path?.startsWith && router.push(menu.path)}>
                   <div className={`${styles['navbar__main-accordion']} ${accordion === menu.path ? styles['accordion_active'] : ''}`} onClick={() => handleClick(index)}>
-                    <button className={router.pathName === menu.path ? styles['accordion_active'] : ''} onClick={() => router.push(menu.path)}>{menu.name}</button>
+                    <button className={router.pathName === menu.path ? styles['accordion_active'] : ''}>{menu.name}</button>
                   </div>
                   {menu.submenu && (
                     <span className={`${styles['navbar__main-icon']} ${accordion === index ? styles.rotate : ''}`}> <i className='bx bx-right-arrow-alt'></i></span>
@@ -53,8 +53,8 @@ const Navbar = () => {
                       {menu.submenu.map((subItem, subIndex) => {
                         return (
                           <div key={subIndex}>
-                            <div className={`${styles['navbar__submenu-item']} ${subAccordion === subIndex ? styles['item-active'] : ''}`}>
-                              <div className={styles['navbar__submenu-list']} onClick={() => handleSubAccordion(subIndex)}>
+                            <div className={`${styles['navbar__submenu-item']} ${router.pathName === subItem.path ? styles['item-active'] : ''}`} onClick={() => subItem.path?.startsWith && router.push(subItem.path)}>
+                              <div className={styles['navbar__submenu-list']} >
                                 <i className={subItem.icon}></i> {subItem.title}
                               </div>
                             </div>
